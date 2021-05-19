@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartElement } from './CartElement';
+import { Total } from './Total';
 
 export const Cart = ({cartElements, setCartElements}) =>{
     console.log(cartElements);
@@ -21,6 +22,7 @@ export const Cart = ({cartElements, setCartElements}) =>{
                         {...elem}
                         deleteItem = {deleteItem}
                         index = {index} />)) }
+            {cartElements.length !== 0 ? <Total cartElements = {cartElements}/> : ''}
         </div>
     );
 }

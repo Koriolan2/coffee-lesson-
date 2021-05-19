@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatPrice } from './formatPrice';
 
 export const CartElement = ({id, title, price, count, sum, index, deleteItem}) => {
     
@@ -13,8 +14,8 @@ export const CartElement = ({id, title, price, count, sum, index, deleteItem}) =
                 <div className="cart__centr">{count}</div>
                 <div className="cart__plus">+</div>
             </div>
-            <div className="cart__price">{price}</div>
-            <div className="cart__summ">{sum}</div>
+            <div className="cart__price">{formatPrice(price)}</div>
+            <div className="cart__summ">{formatPrice(sum)}</div>
         </div>
     </>
     );
